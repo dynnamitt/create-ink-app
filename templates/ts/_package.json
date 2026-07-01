@@ -35,6 +35,7 @@
 	},
 	"ava": {
 		"extensions": ["ts", "tsx"],
+		"workerThreads": false,
 		"nodeArguments": ["--import=tsx"]
 	},
 	"prettier": "@vdemedes/prettier-config"
