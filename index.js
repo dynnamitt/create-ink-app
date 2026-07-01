@@ -137,6 +137,11 @@ const createInkApp = (
 									fromPath('tsconfig.json'),
 									toPath(projectDirectoryPath, 'tsconfig.json'),
 								);
+
+								await fs.copyFile(
+									fromPath('xo.config.js'),
+									toPath(projectDirectoryPath, 'xo.config.js'),
+								);
 							},
 						},
 					]);
