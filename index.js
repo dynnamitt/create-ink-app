@@ -13,11 +13,10 @@ const copyWithTemplate = async (from, to, variables) => {
 	await makeDir(dirname);
 
 	const source = await fs.readFile(from, 'utf8');
-	let generatedSource = source;
-
-	if (typeof variables === 'object') {
-		generatedSource = replaceString(source, '%NAME%', variables.name);
-	}
+	const generatedSource =
+		typeof variables === 'object'
+			? replaceString(source, '%NAME%', variables.name)
+			: source;
 
 	await fs.writeFile(to, generatedSource);
 };
