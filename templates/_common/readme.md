@@ -10,7 +10,7 @@ $ npm install --global %NAME%
 
 ## CLI
 
-```
+```sh
 $ %NAME% --help
 
   Usage
